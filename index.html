@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arunoday | Full-stack developer and UI/UX designer</title>
+<meta name="description" content="Portfolio of Arunoday: full-stack developer and UI/UX designer. Creator of Servedoor, live on Google Play.">
+<meta name="theme-color" content="#070B16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS (in-browser compiler) -->
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#070B16', panel: '#0E1528', line: '#212D4F',
+          mist: '#E6ECFF', dim: '#8E9CC4', accent: '#5B8CFF', amber: '#FFB86B'
+        },
+        fontFamily: {
+          display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+          sans: ['"Hanken Grotesk"', 'system-ui', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { background: #070B16; }
+  ::selection { background: #5B8CFF; color: #070B16; }
+</style>
+</head>
+
+<body class="bg-ink text-mist font-sans antialiased leading-relaxed">
+
+<!-- 3D background: the full stack as three layers that pull apart as you scroll -->
+<canvas id="bg" class="fixed inset-0 w-full h-full z-0 opacity-50 md:opacity-100" aria-hidden="true"></canvas>
+
+<header class="fixed top-0 inset-x-0 z-30 bg-ink/70 backdrop-blur border-b border-line/60">
+  <nav class="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between" aria-label="Main">
+    <a href="#top" class="font-display font-bold text-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent rounded">Arunoday</a>
+    <ul class="flex gap-5 text-sm text-dim">
+      <li><a class="hover:text-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent rounded" href="#skills">Skills</a></li>
+      <li><a class="hover:text-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent rounded" href="#projects">Projects</a></li>
+      <li class="hidden sm:block"><a class="hover:text-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent rounded" href="#education">Education</a></li>
+      <li><a class="hover:text-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent rounded" href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top" class="relative z-10">
+
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center pt-14">
+    <div class="max-w-5xl mx-auto px-5 w-full">
+      <div class="max-w-xl">
+        <p class="text-dim mb-4">Arunoday, full-stack developer and UI/UX designer</p>
+        <h1 class="font-display font-extrabold text-5xl sm:text-6xl leading-[1.02] tracking-tight">
+          I design, build and ship full-stack apps.
+        </h1>
+        <p class="mt-6 text-lg text-dim max-w-md">
+          My food-delivery app Servedoor is live on the Google Play Store, with a customer app, a restaurant dashboard and an admin panel. I work from Figma to React to the server.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#projects" class="px-5 py-2.5 rounded-lg bg-accent text-ink font-semibold hover:bg-mist transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mist">See my projects</a>
+          <a href="#contact" class="px-5 py-2.5 rounded-lg border border-line text-mist font-semibold hover:border-accent transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Get in touch</a>
+        </div>
+      </div>
+      <p class="absolute bottom-8 left-5 text-sm text-dim">Scroll down to pull the stack apart: interface, server, database.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-24">
+    <div class="max-w-5xl mx-auto px-5">
+      <h2 class="font-display font-bold text-3xl sm:text-4xl">What I work with</h2>
+      <p class="mt-3 text-dim max-w-lg">Grouped by the layer of an app they belong to.</p>
+
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
+        <div class="rounded-xl border border-line bg-panel/85 backdrop-blur p-6">
+          <h3 class="font-display font-bold text-xl text-accent">Interface</h3>
+          <p class="mt-1 text-sm text-dim">What people see and touch</p>
+          <ul class="mt-4 flex flex-wrap gap-2 text-sm">
+            <li class="px-3 py-1 rounded-full border border-line">React JS</li>
+            <li class="px-3 py-1 rounded-full border border-line">Three.js</li>
+            <li class="px-3 py-1 rounded-full border border-line">Tailwind CSS</li>
+            <li class="px-3 py-1 rounded-full border border-line">Bootstrap</li>
+            <li class="px-3 py-1 rounded-full border border-line">SASS</li>
+            <li class="px-3 py-1 rounded-full border border-line">HTML and CSS</li>
+            <li class="px-3 py-1 rounded-full border border-line">JavaScript</li>
+            <li class="px-3 py-1 rounded-full border border-line">Figma</li>
+            <li class="px-3 py-1 rounded-full border border-line">UI/UX design</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-line bg-panel/85 backdrop-blur p-6">
+          <h3 class="font-display font-bold text-xl text-accent">Server and data</h3>
+          <p class="mt-1 text-sm text-dim">What runs behind the screen</p>
+          <ul class="mt-4 flex flex-wrap gap-2 text-sm">
+            <li class="px-3 py-1 rounded-full border border-line">Node.js</li>
+            <li class="px-3 py-1 rounded-full border border-line">Express</li>
+            <li class="px-3 py-1 rounded-full border border-line">Flask</li>
+            <li class="px-3 py-1 rounded-full border border-line">Jinja</li>
+            <li class="px-3 py-1 rounded-full border border-line">PostgreSQL</li>
+            <li class="px-3 py-1 rounded-full border border-line">SQL</li>
+            <li class="px-3 py-1 rounded-full border border-line">WebSockets</li>
+            <li class="px-3 py-1 rounded-full border border-line">NGINX reverse proxy</li>
+            <li class="px-3 py-1 rounded-full border border-line">Linux server deployment</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-line bg-panel/85 backdrop-blur p-6">
+          <h3 class="font-display font-bold text-xl text-amber">Apps and tools</h3>
+          <p class="mt-1 text-sm text-dim">How it reaches phones and gets built faster</p>
+          <ul class="mt-4 flex flex-wrap gap-2 text-sm">
+            <li class="px-3 py-1 rounded-full border border-line">Capacitor (Android and iOS)</li>
+            <li class="px-3 py-1 rounded-full border border-line">PWAs</li>
+            <li class="px-3 py-1 rounded-full border border-line">Android Studio</li>
+            <li class="px-3 py-1 rounded-full border border-line">Python</li>
+            <li class="px-3 py-1 rounded-full border border-line">C</li>
+            <li class="px-3 py-1 rounded-full border border-line">Java</li>
+            <li class="px-3 py-1 rounded-full border border-line">Codex</li>
+            <li class="px-3 py-1 rounded-full border border-line">Cursor</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-24">
+    <div class="max-w-5xl mx-auto px-5">
+      <h2 class="font-display font-bold text-3xl sm:text-4xl">Projects</h2>
+
+      <!-- Servedoor (featured) -->
+      <article class="mt-10 rounded-xl border border-line bg-panel/85 backdrop-blur p-6 sm:p-8">
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 class="font-display font-bold text-2xl sm:text-3xl">Servedoor</h3>
+          <span class="text-sm text-amber">Live on Google Play</span>
+        </div>
+        <p class="mt-1 text-dim">Food delivery platform</p>
+        <ul class="mt-5 space-y-2 max-w-2xl list-disc pl-5 marker:text-accent">
+          <li>Zomato-style ordering app for customers, packaged with Capacitor and published on the Google Play Store.</li>
+          <li>Restaurant dashboard with live order updates over WebSockets, menu management, finances and growth insights.</li>
+          <li>Admin dashboard for the owner to monitor the whole business. Backend deployed on a server behind NGINX.</li>
+          <li>Next up: a delivery system to dispatch and track deliveries more efficiently.</li>
+        </ul>
+        <ul class="mt-5 flex flex-wrap gap-2 text-sm text-dim">
+          <li class="px-3 py-1 rounded-full border border-line">React</li>
+          <li class="px-3 py-1 rounded-full border border-line">Node.js</li>
+          <li class="px-3 py-1 rounded-full border border-line">Express</li>
+          <li class="px-3 py-1 rounded-full border border-line">PostgreSQL</li>
+          <li class="px-3 py-1 rounded-full border border-line">Flask</li>
+          <li class="px-3 py-1 rounded-full border border-line">WebSockets</li>
+          <li class="px-3 py-1 rounded-full border border-line">Capacitor</li>
+          <li class="px-3 py-1 rounded-full border border-line">NGINX</li>
+        </ul>
+        
+        <a href="servedoor.com" class="inline-block mt-6 px-5 py-2.5 rounded-lg bg-accent text-ink font-semibold hover:bg-mist transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mist">Open on Google Play</a>
+      </article>
+
+      <div class="mt-5 grid gap-5 md:grid-cols-3">
+        
+        <article class="rounded-xl border border-line bg-panel/85 backdrop-blur p-6 hover:border-accent transition-colors">
+          <h3 class="font-display font-bold text-xl">Interactive 3D Portfolio</h3>
+          <p class="mt-1 text-sm text-dim">Web</p>
+          <p class="mt-4 text-sm">Designed in Figma, built as a responsive React site with an interactive Three.js scene, styled with Tailwind CSS.</p>
+          <p class="mt-4 text-sm text-dim">React, Three.js, Tailwind CSS, Figma</p>
+        </article>
+        
+        <article class="rounded-xl border border-line bg-panel/85 backdrop-blur p-6 hover:border-accent transition-colors">
+          <h3 class="font-display font-bold text-xl">Real-Time Task Manager</h3>
+          <p class="mt-1 text-sm text-dim">Android and iOS app</p>
+          <p class="mt-4 text-sm">Task board with an Express API and PostgreSQL, syncing live across devices over WebSockets, packaged with Capacitor.</p>
+          <p class="mt-4 text-sm text-dim">React, Node.js, PostgreSQL, WebSockets, Capacitor</p>
+        </article>
+        <article class="rounded-xl border border-line bg-panel/85 backdrop-blur p-6 hover:border-accent transition-colors">
+          <h3 class="font-display font-bold text-xl">Medicine Store Inventory</h3>
+          <p class="mt-1 text-sm text-dim">Desktop app</p>
+          <p class="mt-4 text-sm">Generates customer bills, tracks stock, flags at-risk and best-selling medicines, and builds the reorder list automatically.</p>
+          <p class="mt-4 text-sm text-dim">Python, SQL, Tkinter</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-24">
+    <div class="max-w-5xl mx-auto px-5">
+      <h2 class="font-display font-bold text-3xl sm:text-4xl">Education</h2>
+      <ol class="mt-10 border-l border-line ml-1 space-y-8 max-w-xl bg-ink/60 backdrop-blur rounded-r-xl py-2">
+        <li class="pl-6 relative">
+          <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-accent"></span>
+          <p class="text-sm text-dim">2025 to 2029</p>
+          <h3 class="font-display font-bold text-lg">B.Tech, Electronics and Communication</h3>
+          <p class="text-dim">Tezpur University, Assam</p>
+        </li>
+        <li class="pl-6 relative">
+          <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-line"></span>
+          <p class="text-sm text-dim">2022 to 2024</p>
+          <h3 class="font-display font-bold text-lg">Class XII</h3>
+          <p class="text-dim">Diksha International School, Bhagalpur, Bihar</p>
+        </li>
+        <li class="pl-6 relative">
+          <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-line"></span>
+          <p class="text-sm text-dim">2021 to 2022</p>
+          <h3 class="font-display font-bold text-lg">Class X</h3>
+          <p class="text-dim">Holy Family School, Bhagalpur, Bihar</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24">
+    <div class="max-w-5xl mx-auto px-5">
+      <div class="rounded-xl border border-line bg-panel/85 backdrop-blur p-6 sm:p-10">
+        <h2 class="font-display font-bold text-3xl sm:text-4xl">Let's build something</h2>
+        <p class="mt-3 text-dim max-w-md">Open to internships and freelance projects. Email is the fastest way to reach me.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="mailto:arunalphap66@gmail.com" class="px-5 py-2.5 rounded-lg bg-accent text-ink font-semibold hover:bg-mist transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mist">arunalphap66@gmail.com</a>
+          <a href="tel:+917061863097" class="px-5 py-2.5 rounded-lg border border-line font-semibold hover:border-accent transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">+91 70618 63097</a>
+          <!-- TODO: replace YOUR-USERNAME in both links -->
+          <a href="https://github.com/neraverze" class="px-5 py-2.5 rounded-lg border border-line font-semibold hover:border-accent transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">GitHub</a>
+          <a href="https://linkedin.com/in/arunoday-singh-21b17a384" class="px-5 py-2.5 rounded-lg border border-line font-semibold hover:border-accent transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">LinkedIn</a>
+        </div>
+      </div>
+      <p class="mt-10 text-sm text-dim">Arunoday, Tezpur, Assam, India</p>
+    </div>
+  </section>
+</main>
+
+<!-- Three.js r128 (pinned) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function () {
+  var canvas = document.getElementById('bg');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+  } catch (e) { canvas.style.display = 'none'; return; }
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
+  camera.position.set(0, 0, 10);
+
+  // Three slabs: interface (top), server (middle), database (bottom)
+  var colors = [0x8fb0ff, 0x5b8cff, 0xffb86b];
+  var group = new THREE.Group();
+  var slabs = colors.map(function (c) {
+    var geo = new THREE.BoxGeometry(3.4, 0.2, 3.4);
+    var mesh = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ color: c, transparent: true, opacity: 0.12 }));
+    mesh.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo), new THREE.LineBasicMaterial({ color: c })));
+    group.add(mesh);
+    return mesh;
+  });
+  scene.add(group);
+
+  // Dust
+  var N = 300, pos = new Float32Array(N * 3);
+  for (var i = 0; i < N * 3; i++) pos[i] = (Math.random() - 0.5) * 22;
+  var pg = new THREE.BufferGeometry();
+  pg.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  var dust = new THREE.Points(pg, new THREE.PointsMaterial({ color: 0x8e9cc4, size: 0.035, transparent: true, opacity: 0.6 }));
+  scene.add(dust);
+
+  var mouse = { x: 0, y: 0 }, cur = { x: 0, y: 0, p: 0 };
+  window.addEventListener('pointermove', function (e) {
+    mouse.x = (e.clientX / window.innerWidth - 0.5) * 2;
+    mouse.y = (e.clientY / window.innerHeight - 0.5) * 2;
+  });
+
+  function progress() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    return max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+  }
+
+  function resize() {
+    var w = window.innerWidth, h = window.innerHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    var wide = w >= 768;
+    group.position.x = wide ? 3.2 : 0;
+    group.scale.setScalar(wide ? 1 : 0.75);
+  }
+
+  var t0 = performance.now();
+  function frame(now) {
+    var k = reduce ? 1 : 0.06;
+    cur.x += (mouse.x - cur.x) * k;
+    cur.y += (mouse.y - cur.y) * k;
+    cur.p += (progress() - cur.p) * k;
+
+    var spread = 0.55 + cur.p * 2.4;
+    slabs.forEach(function (s, i) { s.position.y = (1 - i) * spread; });
+
+    var spin = reduce ? 0 : (now - t0) * 0.00012;
+    group.rotation.x = 0.55 + cur.y * 0.12;
+    group.rotation.y = spin + cur.p * 2.2 + cur.x * 0.25;
+    dust.rotation.y = spin * 0.4;
+    renderer.render(scene, camera);
+    if (!reduce) requestAnimationFrame(frame);
+  }
+
+  resize();
+  window.addEventListener('resize', function () { resize(); if (reduce) frame(performance.now()); });
+  if (reduce) {
+    window.addEventListener('scroll', function () { frame(performance.now()); }, { passive: true });
+    frame(performance.now());
+  } else {
+    requestAnimationFrame(frame);
+  }
+})();
+</script>
+</body>
+</html>
